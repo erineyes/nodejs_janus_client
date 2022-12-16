@@ -1,10 +1,10 @@
 {
-  "name": "cctv_media_bridge_server",
+  "name": "cctv_stream_proxy_server",
   "version": "1.0.0",
-  "description": "cctv media bridge server",
+  "description": "cctv stream proxy server",
   "main": "src/index.js",
   "scripts": {
-    "start": "pm2 start ecosystem.config.js --only cctv_media_bridge_server --env production"
+    "start": "pm2 start ecosystem.config.js --only cctv_stream_proxy_server --env production"
   },
   "author": "erineyes",
   "license": "MIT",

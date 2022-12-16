@@ -285,4 +285,4 @@ app.get('/Camera/List', (req, res) => {
 
 
 
-app.listen(3030, () => console.log("cctv media bridge server"));
+app.listen(3031, () => console.log("cctv media bridge server"));

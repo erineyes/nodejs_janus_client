@@ -165,7 +165,7 @@ app.post('/Room/Create', (req, res) => {
     const { room, publishers, pin } = req.body;
 
     let client = new Client({
-        url: 'ws://52.79.247.10:8188'
+        url: 'ws://127.0.0.1:8188'
     });
     createCooperation(client, room, publishers, pin)
         .then((value) => {
@@ -180,7 +180,7 @@ app.post('/Room/Destroy', (req, res) => {
     const { room } = req.body;
 
     let client = new Client({
-        url: 'ws://52.79.247.10:8188'
+        url: 'ws://127.0.0.1:8188'
     });
     destroyCooperation(client, room)
         .then((value) => {
@@ -194,7 +194,7 @@ app.post('/Room/Destroy', (req, res) => {
 app.get('/Room/List', (req, res) => {
 
     let client = new Client({
-        url: 'ws://52.79.247.10:8188'
+        url: 'ws://127.0.0.1:8188'
     });
     listCooperation(client)
         .then((value) => {
@@ -209,7 +209,7 @@ app.post('/Room/ListParticipants', (req, res) => {
     const { room } = req.body;
 
     let client = new Client({
-        url: 'ws://52.79.247.10:8188'
+        url: 'ws://127.0.0.1:8188'
     });
     listParticipantsCooperation(client, room)
         .then((value) => {
@@ -220,7 +220,7 @@ app.post('/Room/ListParticipants', (req, res) => {
     client.connect();
 });
 
-app.listen(3030, () => console.log("media server bridge server"));
+app.listen(3030, () => console.log("WebRTC Media Server Porxy Server"));
 
 /*
 var Client = require('./proxy').Proxy;
